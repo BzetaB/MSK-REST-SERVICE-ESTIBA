@@ -9,4 +9,5 @@ public interface EstibaRepository
         extends JpaRepository<Estiba, Integer> {
     Estiba findByNrodocumento(String nrodocumento);
     Estiba findByNombre(String nombre);
+    Estiba findByNrodocumentoAndContrasenia(String nrodocumento, String contrasenia);
 }

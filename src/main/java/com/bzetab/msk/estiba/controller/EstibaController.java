@@ -1,8 +1,10 @@
 package com.bzetab.msk.estiba.controller;
 
 import com.bzetab.msk.estiba.model.Estiba;
+import com.bzetab.msk.estiba.model.auth.LoginRequest;
 import com.bzetab.msk.estiba.service.EstibaImp;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/estiba")
 public class EstibaController {
+    @Autowired
     private EstibaImp estibaImp;
 
     //agrego '/id/' para evitar ambiguedades con nrodocumento y nombre
